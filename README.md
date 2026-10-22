@@ -4,19 +4,22 @@ An Oracle SQL database project designed to model the core operations of a ridesh
 
 ## Project Overview
 
-This project was developed as part of my BSc (Hons) Cyber Security & Networks studies.
+This project was originally developed as part of my BSc (Hons) Cyber Security & Networks studies.
 
 The aim was to design and implement a relational database system capable of supporting common rideshare operations while maintaining clear relationships between customers, drivers, vehicles, rides and supporting business records.
 
-The project includes database design, SQL implementation, sample data, complex queries, triggers, stored procedures, an entity relationship diagram, a use-case diagram and data dictionary documentation.
+The project includes database design, SQL implementation, sample data, complex queries, triggers, a stored procedure, an entity relationship diagram, a use-case diagram and data dictionary documentation.
+
+This repository contains a cleaned portfolio version of the original coursework implementation. Sample personal-looking data has been replaced with synthetic demonstration data and the SQL files have been reformatted and documented for clarity.
 
 ## Technologies Used
 
 - Oracle SQL
-- SQL DDL and DML
 - PL/SQL
-- Draw.io
+- SQL DDL and DML
 - Relational Database Design
+- Draw.io
+- Oracle database development tools
 
 ## Database Entities
 
@@ -37,16 +40,17 @@ Additional helper tables are used for loyalty-point expiry and customer notifica
 
 The system uses primary and foreign keys to create relationships between the main entities.
 
-Examples include:
+Key relationships include:
 
 - Customers linked to rides
 - Drivers linked to rides
 - Vehicles linked to rides
 - Payments linked to rides
-- Feedback linked to customers, drivers and rides
-- Maintenance and fuel records linked to vehicles
+- Feedback linked to rides, customers and drivers
+- Maintenance records linked to vehicles
+- Fuel records linked to vehicles
 
-The complete relational schema can be viewed in:
+The complete relational schema is available in:
 
 `sql/Relational-Schema.md`
 
@@ -56,7 +60,7 @@ The ERD represents the main entities and relationships within the database.
 
 ![Entity Relationship Diagram](diagrams/ERD.png)
 
-The editable Draw.io source file is also available in the `diagrams` folder.
+The editable Draw.io source file is also included in the `diagrams` folder.
 
 ## Use-Case Diagram
 
@@ -64,47 +68,57 @@ The project also includes a use-case diagram representing key interactions withi
 
 ![Use-Case Diagram](diagrams/Use-Case.png)
 
+The editable Draw.io file is included alongside the diagram.
+
 ## SQL Files
 
 The main database files are stored in the `sql` folder.
 
 ### DDL
 
-`DDL.sql`
+`sql/DDL.sql`
 
-Creates the database tables, primary keys, foreign keys and other structural constraints.
+Creates the main database tables and defines:
+
+- Primary keys
+- Foreign keys
+- Identity columns
+- Unique constraints
+- Data types
+- Default values
 
 ### Sample Data
 
-`Sample-Data.sql`
+`sql/Sample-Data.sql`
 
-Contains synthetic sample data used to populate and test the database.
+Contains synthetic sample data used to demonstrate and populate the database structure.
 
-All names, contact details, addresses and identifiers in this file are fictional and intended solely for demonstration and database testing.
+All names, contact details, addresses, registration details and identifiers in the portfolio version are fictional and are included solely for database development and demonstration.
 
 ### Queries
 
-`Queries.sql`
+`sql/Queries.sql`
 
-Contains eight SQL queries demonstrating different database operations including:
+Contains eight SQL queries demonstrating:
 
-- Multiple-table joins
+- Multi-table joins
 - Filtering
 - Aggregation
 - Subqueries
-- GROUP BY
-- HAVING
-- UNION ALL
+- `GROUP BY`
+- `HAVING`
+- `UNION ALL`
 - Date-based analysis
 - Driver performance analysis
 - Revenue calculations
+- Customer cancellation analysis
 - Vehicle maintenance analysis
 
-## Triggers and Stored Procedures
+## Triggers and Stored Procedure
 
-`Triggers-And-Procedures.sql`
+`sql/Triggers-And-Procedures.sql`
 
-The project includes automation using PL/SQL.
+The project demonstrates database automation using PL/SQL.
 
 ### Trigger 1
 
@@ -120,15 +134,15 @@ Generates customer notifications when loyalty points are due to expire within se
 
 ## Query Results
 
-Screenshots showing the results of the eight implemented queries are stored in:
+The `query-results` folder contains screenshots from the original coursework implementation showing the results of the eight SQL queries.
 
-`query-results/`
+These screenshots provide evidence of the database queries being executed against the populated project database.
 
-These demonstrate that the queries were executed against the populated database.
+The SQL files in this repository have since been cleaned and reformatted for portfolio presentation, so the screenshots represent the original implemented version rather than a fresh execution of every portfolio-edited file.
 
 ## Data Dictionary
 
-The `data-dictionary` folder contains documentation screenshots for each major database entity:
+The `data-dictionary` folder contains documentation for each main database entity:
 
 - Customer
 - Driver
@@ -138,6 +152,8 @@ The `data-dictionary` folder contains documentation screenshots for each major d
 - Feedback
 - Maintenance
 - Fuel
+
+The data dictionary documents the attributes used across the relational model.
 
 ## Project Structure
 
@@ -180,34 +196,44 @@ rideshare-database-system/
 └── README.md
 ```
 
-## What I Learned
+## Skills Demonstrated
 
-Through this project I developed practical experience in:
+This project demonstrates practical experience in:
 
 - Relational database design
-- Creating entity relationships
+- Entity relationship modelling
 - Primary and foreign key implementation
 - Oracle SQL
-- Writing DDL and DML
-- Developing complex SQL queries
-- Using joins and subqueries
+- SQL DDL and DML
+- Complex SQL queries
+- Joins and subqueries
 - SQL aggregation and reporting
-- Designing triggers
-- Writing stored procedures
-- Creating database diagrams
-- Structuring and documenting a complete database project
+- PL/SQL triggers
+- Stored procedures
+- Database automation
+- Data modelling
+- Data dictionary development
+- Technical documentation
+- GitHub project organisation
 
 ## Future Improvements
 
-Possible future developments could include:
+Possible future improvements include:
 
 - Additional validation constraints
 - Database views
 - More advanced stored procedures
 - Role-based access control
 - Audit logging
-- Improved reporting queries
+- Additional reporting queries
+- Improved exception handling
 - Integration with a web or mobile application
+
+## Portfolio Note
+
+This repository is intended as a technical portfolio representation of the original university database project.
+
+The original project was developed and executed using Oracle database tools. The portfolio version has been reorganised, documented and anonymised to make the work easier to review publicly on GitHub.
 
 ## Author
 
